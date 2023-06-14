@@ -37,8 +37,17 @@ console.log(tax20 * productsCost);
 /*CHALLENGE EXERCISES!*/
 function fahrenheitToCelsius(fahrenheit) {
   const celsius = (fahrenheit -32) *(5/9)
-  return `${celsius}°F`;
+  return `${celsius}°C`;
 }
-//2L 
+function celsiusToFahrenheit(celsius) {
+  const fahrenheit = (celsius *(9/5)) +32;
+  return `${fahrenheit}°F`;
+}
+//2l
+console.log(celsiusToFahrenheit(25));
 
+//2m
 console.log(fahrenheitToCelsius(86));
+
+//2n
+console.log(celsiusToFahrenheit(-5));
