@@ -15,41 +15,81 @@
     <script src="scripts/05-calculator.js"></script>
   </head>
   <body>
-    <!-- 5m -->
-    <button
-      onclick="
-      calculation+='1';
+    <p>
+      <!-- 5m -->
+      <button
+        onclick="
+        calculation+='1';
+        console.log(calculation);
+      "
+      >
+        1</button
+      ><!-- 5o -->
+      <button
+        onclick="
+      calculation+='2';
       console.log(calculation);
-    "
-    >
-      1</button
-    ><!-- 5o -->
+      "
+      >
+        2
+      </button>
+      <button
+        onclick="
+      calculation+='3';
+      console.log(calculation);"
+      >
+        3
+      </button>
+      <button
+        onclick="
+        calculation+=' + ';
+        console.log(calculation);"
+      > <!-- 5p -->
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="
+        calculation+='4';
+        console.log(calculation);
+      "
+      >
+        4</button
+      >
+      <button
+        onclick="
+      calculation+='5';
+      console.log(calculation);
+      "
+      >
+        5
+      </button>
+      <button
+        onclick="
+      calculation+='6';
+      console.log(calculation);"
+      >
+        6
+      </button>
+      <button
+        onclick="
+        calculation+=' - ';
+        console.log(calculation);"
+      > <!-- 5p -->
+        -
+      </button>
+    </p>
+    
+
     <button
       onclick="
-    calculation+='2';
+    // calculation+=' = ';
+    calculation = eval(calculation);//5q
     console.log(calculation);
-    document.querySelector('.calculation').innerHTML = 'hi'"
-    >
-      2
-    </button>
-    <button
-      onclick="
-    calculation+='3';
-    console.log(calculation);"
-    >
-      3
-    </button>
-    <button
-      onclick="
-    calculation+=' + ';
-    console.log(calculation);"
-    >
-      +
-    </button>
-    <button
-      onclick="
-    calculation+=' = ';
-    console.log(calculation);"
+    
+    " 
     >
       =
     </button>
