@@ -31,5 +31,7 @@ function converTemperature(degrees, unit) {
       const fahrenheit = convertToFahrenheit(degrees);
       console.log(`${fahrenheit}F`);
     }
-  } 
+  } else {
+    console.log('Kindly add the unit of temperature.');
+  }
 }
