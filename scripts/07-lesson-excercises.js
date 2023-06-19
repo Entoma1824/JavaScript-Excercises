@@ -1,3 +1,5 @@
+let calculation = '';
+
 //7a & 7b
 function greet(name) {
   //7c
@@ -36,19 +38,27 @@ function converTemperature(degrees, unit) {
   }
 }
 
-// //7g
-// function updateCalculation(value) {
-//   const numbers = ['0', '1', '2','3', '4', '5','6', '7', '8','9'];
-//   for(let i = 0; i <= numbers.length; i++) {
-//     if(numbers[i] === value) {
-//       console.log(calculation);
-//     } 
-//   }
-// }
+//7g
+function appendToResult(value) {
+  document.getElementById('result').value += value;
+}
+
+function calculate() {
+  const result = eval(document.getElementById('result').value);
+  document.getElementById('result').value = result;
+}
+
+function clearResult() {
+  document.getElementById('result').value = '';
+}
+
+function totalCalculation() {
+  const totalCalculation = eval(calculation);
+  console.log(totalCalculation);
+}
 
 //7h
 function updateCartQuantity(change) {
-  
   if (cartQuantity + change > 10) {
     alert('The cart is full');
     return;
