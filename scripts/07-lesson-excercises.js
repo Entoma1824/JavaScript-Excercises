@@ -1,5 +1,5 @@
 let calculation = '';
-
+let cartQuantity = 0;
 //7a & 7b
 function greet(name) {
   //7c
@@ -52,19 +52,22 @@ function clearResult() {
   document.getElementById('result').value = '';
 }
 
-function totalCalculation() {
-  const totalCalculation = eval(calculation);
-  console.log(totalCalculation);
-}
+// function totalCalculation() {
+//   const totalCalculation = eval(calculation);
+//   console.log(totalCalculation);
+// }
 
 //7h
 function updateCartQuantity(change) {
   if (cartQuantity + change > 10) {
+    // console.log(cartQuantity -= cartQuantity-10);
+    cartQuantity -= cartQuantity - 10;
     alert('The cart is full');
     return;
   }
 
   if (cartQuantity + change < 0) {
+    cartQuantity = 0;
     alert('Not enough items in the cart');
     return;
   }
