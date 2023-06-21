@@ -43,3 +43,24 @@ function isSameProduct(product1, product2) {
     return false;
   }
 }
+
+
+/* https://chat.openai.com/share/8b85a728-3be3-4097-98a5-6db73f345925 */ //8f
+
+/* https://chat.openai.com/share/8b85a728-3be3-4097-98a5-6db73f345925 */ //8g
+
+
+//8h 
+function appendToResult(value) {
+  document.getElementById('result').value += value;
+}
+
+function calculate() {
+  const result = eval(document.getElementById('result').value);
+  document.getElementById('result').value = result;
+}
+
+function clearResult() {
+  document.getElementById('result').value = '';
+
+}
