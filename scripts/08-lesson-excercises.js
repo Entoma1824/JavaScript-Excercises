@@ -48,16 +48,54 @@ function isSameProduct(product1, product2) {
 
 /* https://chat.openai.com/share/8b85a728-3be3-4097-98a5-6db73f345925 */ //8g
 
+
 //8h
-function appendToResult(value) {
-  document.getElementById('result').value += value;
+//I will finish this section later because I'm getting confused with the localStorage.
+
+// let calculation = localStorage.getItem('calculation') || '';
+// function appendToResult(value) {
+//   calculation += value;
+//   document.getElementById('result').value += value;
+//   console.log(calculation);
+
+// }
+
+// function calculate() {
+//   const result = eval(document.getElementById('result').value);
+//   document.getElementById('result').value = result;
+//   // localStorage.getItem('calculation')
+//   console.log(result);
+// }
+
+// function clearResult() {
+//   document.getElementById('result').value = '';
+//   localStorage.removeItem('calculation');
+//   console.log(calculation)
+// }
+
+//8i
+const scoreBoard = {
+  wins: 0,
+  losses: 0,
+};
+function playGame(playerGuess) {
+  const math = Math.random();
+  let guess = '';
+  if (math <= 0.5) {
+    console.log('Heads');
+    guess = 'Heads';
+    status(guess, playerGuess);
+  } else {
+    console.log('tails');
+    guess = 'Tails';
+    status(guess, playerGuess);
+  }
 }
 
-function calculate() {
-  const result = eval(document.getElementById('result').value);
-  document.getElementById('result').value = result;
-}
-
-function clearResult() {
-  document.getElementById('result').value = '';
+function status(guess, playerGuess) {
+  if (guess === playerGuess) {
+    document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins += 1} Losses: ${scoreBoard.losses}`;
+  } else if (guess !== playerGuess) {
+    document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins} Losses: ${scoreBoard.losses += 1}`;
+  }
 }
