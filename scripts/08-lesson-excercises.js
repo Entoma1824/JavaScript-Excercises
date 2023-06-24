@@ -52,50 +52,73 @@ function isSameProduct(product1, product2) {
 //8h
 //I will finish this section later because I'm getting confused with the localStorage.
 
-// let calculation = localStorage.getItem('calculation') || '';
-// function appendToResult(value) {
-//   calculation += value;
-//   document.getElementById('result').value += value;
-//   console.log(calculation);
+let calculation = localStorage.getItem('calculation') || '';
+document.getElementById('result').value = calculation;
 
-// }
 
-// function calculate() {
-//   const result = eval(document.getElementById('result').value);
-//   document.getElementById('result').value = result;
-//   // localStorage.getItem('calculation')
-//   console.log(result);
-// }
 
-// function clearResult() {
-//   document.getElementById('result').value = '';
-//   localStorage.removeItem('calculation');
-//   console.log(calculation)
-// }
+function appendToResult(value) {
+  calculation += value;
+  document.getElementById('result').value += value;
+  localStorage.setItem('calculation', value)
+  console.log(calculation);
 
-//8i
-const scoreBoard = {
+}
+
+function calculate() {
+  const result = eval(document.getElementById('result').value);
+  document.getElementById('result').value = result;
+  // localStorage.getItem('calculation')
+  localStorage.setItem('calculation', result)
+  console.log(result);
+}
+
+function clearResult() {
+  document.getElementById('result').value = '';
+  localStorage.removeItem('calculation');
+  console.log(calculation)
+}
+
+//8i and 8j
+const scoreBoard = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
 };
+
+
 function playGame(playerGuess) {
-  const math = Math.random();
   let guess = '';
+  const math = Math.random();
   if (math <= 0.5) {
-    console.log('Heads');
     guess = 'Heads';
-    status(guess, playerGuess);
+    console.log(guess);
+    if (guess === playerGuess) {
+      document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins += 1} Losses: ${scoreBoard.losses}`;
+    } else if (guess !== playerGuess) {
+      document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins} Losses: ${scoreBoard.losses += 1}`;
+    }
+    return guess;
   } else {
-    console.log('tails');
     guess = 'Tails';
-    status(guess, playerGuess);
+    console.log(guess);
+    if (guess === playerGuess) {
+      document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins += 1} Losses: ${scoreBoard.losses}`;
+    } else if (guess !== playerGuess) {
+      document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins} Losses: ${scoreBoard.losses += 1}`;
+    }
+    //8k
+    localStorage.setItem('score', JSON.stringify(scoreBoard));
+
+    return guess;
   }
 }
 
-function status(guess, playerGuess) {
-  if (guess === playerGuess) {
-    document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins += 1} Losses: ${scoreBoard.losses}`;
-  } else if (guess !== playerGuess) {
-    document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins} Losses: ${scoreBoard.losses += 1}`;
-  }
-}
+// function status() {
+//   if (guess === playerGuess) {
+//     document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins += 1} Losses: ${scoreBoard.losses}`;
+//   } else if (guess !== playerGuess) {
+//     document.querySelector('.score-board').innerHTML = `Wins:${scoreBoard.wins} Losses: ${scoreBoard.losses += 1}`;
+//   }
+// }
+
+
