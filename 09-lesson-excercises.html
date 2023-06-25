@@ -10,14 +10,35 @@
     -->
 
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="scripts/09-lesson-excercises.js"></script>
 
   </head>
   <body>
     <!-- 9a -->
     <button>9a</button>
+    
+    <!-- 9b -->
+    <button class="js-button">9b</button>
 
+    <!-- 9c -->
+    <button onclick="playGame('Heads')">Heads</button>
+    <button onclick="playGame('Tails')">Tails</button>
+    <p class="score-board"></p>
+
+
+    <!-- 9d and 9e and 9f -->
+    <input type="text" id="input-text" onkeydown="
+      if (event.key === 'Enter') {
+        getText();
+      }
+    "/>
+    <button onclick="getText();">Submit</button>
+    <p class="name-display"></p>
+
+    
 
     <a href="index.html">Home</a>
+
+    <script src="scripts/09-lesson-excercises.js"></script>
+
   </body>
 </html>
