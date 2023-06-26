@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button
+      class="subscribtion"
+      onclick="
+      /*
+      subscribeValue = !subscribeValue
+
+      subscribeValue
+        ? (document.querySelector('.subscribtion').innerHTML = 'Subscribe')
+        : (document.querySelector('.subscribtion').innerHTML = 'Subscribed');
+        */
+        subscribe();
+    "
+    >
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Caclulator</p>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input"
+      onkeydown="
+        handleCostKeyDown(event);
+     "
+    />
+    <button
+      onclick="
+        calculateTotal();
+      "
+    >
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
+
+    <script src="scripts/09-amazon-shipping-calculator.js"></script>
+    <a href="index.html">home</a>
+
+  </body>
+</html>

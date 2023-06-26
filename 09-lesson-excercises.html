@@ -33,9 +33,19 @@
     "/>
     <button onclick="getText();">Submit</button>
     <p class="name-display"></p>
+<!-- 
+    <input onkeypress="
+      if(event.key !== 'Enter') {
+        text += event.key;
+        displayCurrentlyTyping()
+      } 
+    ">
+    <p class="display-text-input"></p>
+ -->
+ <input placeholder="Type something" class="input" onkeyup="displayCurrentlyTyping()">
 
+<p class="text-message"></p>
     
-
     <a href="index.html">Home</a>
 
     <script src="scripts/09-lesson-excercises.js"></script>

@@ -18,3 +18,21 @@ function getText() {
     const outputName = document.querySelector('.name-display');
     outputName.innerText = output;
 }
+
+//9h
+/*
+let text = '';
+function displayCurrentlyTyping() {
+    let getText = ''; 
+    getText += text;
+
+
+    document.querySelector('.display-text-input').innerText = `${text}`;
+}
+*/
+
+function displayCurrentlyTyping() {
+    const inputElement = document.querySelector('.input');
+    document.querySelector('.text-message')
+      .innerHTML = inputElement.value;
+}
