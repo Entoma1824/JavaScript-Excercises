@@ -21,7 +21,7 @@ function calculateTotal() {
     if (cost <= 40) {
         cost = cost + 10;
     } 
-
+    // 9g
     const roundUpCost = cost.toFixed(2);
     document.querySelector('.js-total-cost').innerText = `$${roundUpCost}`;
 }

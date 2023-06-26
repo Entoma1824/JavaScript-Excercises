@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="scripts/07-lesson-excercises.js">
+    <script src="scripts/09-cart-quantity.js">
       greet()
     </script>
     <link rel="stylesheet" href="styles/styles.css" />
@@ -14,6 +14,8 @@
     <button
       onclick="
     console.log(`Cart quantity: ${cartQuantity}`);
+
+    document.querySelector('.display-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
     "
     >
       Show Quantity
@@ -108,30 +110,8 @@
     >
       Reset Cart
     </button>
-    <br/>
-    <!-- calculator -->
-    <input type="text" id="result" readonly>
-    <br/>
-    <button onclick="appendToResult(7)">7</button>
-    <button onclick="appendToResult(8)">8</button>
-    <button onclick="appendToResult(9)">9</button>
-    <button onclick="appendToResult('/')">/</button>
-    <br>
-    <button onclick="appendToResult(4)">4</button>
-    <button onclick="appendToResult(5)">5</button>
-    <button onclick="appendToResult(6)">6</button>
-    <button onclick="appendToResult('*')">*</button>
-    <br>
-    <button onclick="appendToResult(1)">1</button>
-    <button onclick="appendToResult(2)">2</button>
-    <button onclick="appendToResult(3)">3</button>
-    <button onclick="appendToResult('-')">-</button>
-    <br>
-    <button onclick="appendToResult(0)">0</button>
-    <button onclick="appendToResult('.')">.</button>
-    <button onclick="calculate()">=</button>
-    <button onclick="appendToResult('+')">+</button>
-    <br>
-    <button onclick="clearResult()">Clear</button>
+
+    <p class="display-cart-quantity">Cart quantity: 0</p>
+ 
   </body>
 </html>

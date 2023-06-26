@@ -24,7 +24,7 @@ function convertToCelsius(fahrenheit) {
   return celsius;
 }
 //7f
-function converTemperature(degrees, unit) {
+function convertTemperature(degrees, unit) {
   if (!unit) {
     if (unit === ('F' || 'f')) {
       const celsius = convertToCelsius(degrees);
@@ -73,4 +73,6 @@ function updateCartQuantity(change) {
   }
   cartQuantity += change;
   console.log(calculation);
+  
+    document.querySelector('.display-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
 }
