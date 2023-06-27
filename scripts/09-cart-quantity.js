@@ -62,12 +62,14 @@ function updateCartQuantity(change) {
   if (cartQuantity + change > 10) {
     // console.log(cartQuantity -= cartQuantity-10);
     cartQuantity -= cartQuantity - 10;
+    document.querySelector('.display-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
     alert('The cart is full');
     return;
   }
 
   if (cartQuantity + change < 0) {
     cartQuantity = 0;
+    document.querySelector('.display-cart-quantity').innerHTML = `Cart quantity: ${cartQuantity}`;
     alert('Not enough items in the cart');
     return;
   }
