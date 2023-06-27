@@ -1,0 +1,15 @@
+.css-amazon-add-to-cart-button {
+    background-color: rgb(255, 216, 20);
+    border-radius: 100px;
+    border-color: transparent;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.uber-request-now-button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 10px;
+}
