@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>DOM Projects</title>
+
+    <link rel="stylesheet" href="styles/10-improved-amazon-shippping-calculator.css" />
+  </head>
+
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button
+      class="subscribtion subscribe-button"
+      onclick="
+        subscribe();
+    "
+    >
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Caclulator</p>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="
+        handleCostKeyDown(event);
+     "
+    />
+    <button
+      onclick="
+        calculateTotal();
+      " 
+      class="calculate-button"
+    >
+      Calculate
+    </button>
+
+    <p class="error-message"></p> 
+    <p class="js-total-cost"></p>   
+
+    <a href="index.html"> home</a>
+
+    <script src="scripts/10-improved-amazon-shipping-calculator.js"></script>
+  </body>
+</html>

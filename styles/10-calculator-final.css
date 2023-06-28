@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+}
+
+
+input{
+    width: 300px;
+    border-color: transparent;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+}
+
+button {
+    margin: 5px;
+    font-size: 20px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+    border-color: transparent;
+    background-color: dimgray;
+    color: white;
+}
+
+.math-operators {
+    font-size: 30px;
+    background-color: #f69906;
+}
+
+.toggle-math-operators {
+    color:#f69906;
+    background-color: white;
+}
+
+.zero {
+    
+    width: 145px;
+}
